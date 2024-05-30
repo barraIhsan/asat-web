@@ -1,5 +1,9 @@
 ---
 import Navbar from '../layouts/Navbar.astro'
+import ServiceCards from '../components/ServiceCards.svelte'
+import Info from '../components/Info.svelte'
+import Testimonial from '../components/Testimonial.svelte'
+import Footer from '../layouts/Footer.astro'
 import '@fontsource/Barlow'
 import '@fontsource/Barlow/600.css'
 import '@fontsource/Barlow/700.css'
@@ -17,5 +21,17 @@ import '@fontsource/Barlow/900.css'
 	</head>
 	<body>
 		<Navbar />
+		<section class="flex gap-5 bg-light py-48 px-72">
+			<div class="flex-1 flex flex-col gap-5 justify-center">
+				<h1 class="text-dark text-6xl font-semibold">Professional, Loving and Reliable Cat Care When You Can't be There</h1>
+				<p class="text-dark text-xl">Di Joy Cat, kami berkomitmen untuk memberikan perawatan terbaik bagi kucing kesayangan Anda. Kami menawarkan berbagai layanan yang dirancang khusus untuk memastikan kesehatan dan kebahagiaan kucing Anda. Dari klinik kucing hingga daycare dan grooming, serta program adopsi, Joy Cat adalah pilihan tepat bagi para pemilik kucing yang peduli.</p>
+				<img src="/img/paw-hero.svg" alt="Cat Paw" class="w-52">
+			</div>
+			<div class="flex-1 flex justify-end h-fit relative">
+				<img src="/img/hero-home-1.jpg" alt="Cat Images" class="rounded-t-full w-8/12 h-fit border-10 border-white"/>
+				<img src="/img/hero-home-2.jpg" alt="Cat Images" class="absolute right-[-15%] bottom-[-15%] rounded-full w-2/6 aspect-[4/6] h-auto object-cover -scale-x-100 border-10 border-fuschia">
+				<img src="/img/hero-home-3.jpg" alt="" class="absolute left-1/4 rounded-full size-2/6 aspect-square h-auto object-cover border-10 border-green">
+			</div>
+		</section>
 	</body>
 </html>
