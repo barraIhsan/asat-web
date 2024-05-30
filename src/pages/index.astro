@@ -2,6 +2,7 @@
 import Navbar from '../layouts/Navbar.astro'
 import ServiceCards from '../components/ServiceCards.svelte'
 import Info from '../components/Info.svelte'
+import Testimonial from '../components/Testimonial.svelte'
 import '@fontsource/Barlow'
 import '@fontsource/Barlow/600.css'
 import '@fontsource/Barlow/700.css'
@@ -54,6 +55,12 @@ import '@fontsource/Barlow/900.css'
 				<hr class="text-fuschia">
 				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15860.663436893967!2d106.8679048!3d-6.3725769!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69edee0a2b7f05%3A0x95ab16f97f8f308a!2sMoreTHAN%20Veterinary%20Clinic!5e0!3m2!1sen!2sid!4v1717070086346!5m2!1sen!2sid" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="border-none h-80"></iframe>
 			</div>
+		</section>
+		<section class="bg-fuschia flex gap-10 py-24 px-10">
+			<h2 class="font-black text-6xl text-dark">Testimonials</h2>
+			<Testimonial quote="It was my second time there. I believe my cat, Dusty had a good time there. Had a major timming and royal splash spa. The fur is still smooth after 2 weeks. They took great care of Dusty knowing that she is pregnant. Recommended!" author="Amelia Rose" />
+			<Testimonial quote="Clean and nice for the cats. Grooming package is good too. We chose a special package for our cat🐱, Molly. Today we sent 6 cats for boarding. Love JoyCat service!" author="Niki Jasmine" />
+			<Testimonial quote="Sent Casper for grooming and chose to try aromatic salt bath. She enjoyed the session and seems calmer and approachable compared to before 😍. The place is well kept and adhere to Covid 19 SOP. Really recommended!" author="Hanna Isma" />
 		</section>
 	</body>
 </html>
