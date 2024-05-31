@@ -16,6 +16,9 @@ export default {
 				gold: "#F6C956",
 				fuschia: "#C6EAE3",
 			},
+			screens: {
+				xs: "480px"
+			}
 		},
 	},
 	plugins: [],
