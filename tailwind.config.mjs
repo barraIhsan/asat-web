@@ -16,6 +16,7 @@ export default {
 				dark: "#2E5070",
 				light: "#EDF8F9",
 				green: "#95BB6F",
+				greenHover: "#7A995B",
 				gold: "#F6C956",
 				fuschia: "#C6EAE3",
 			},
