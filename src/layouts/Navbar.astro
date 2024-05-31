@@ -1,9 +1,14 @@
 <nav class="flex justify-between px-10 py-3 bg-[url('/img/paw-pattern-light.png')] rounded-full fixed inset-x-5 top-5 bg-white z-10">
-	<img src="/img/logo-dark.svg" alt="Logo" class="w-44">
-	<ul class="flex items-center gap-8 text-[#2E5171] font-semibold">
+	<img src="/img/logo-dark.svg" alt="Logo" class="w-36 xs:w-44">
+	<ul class="hidden md:flex items-center gap-8 text-[#2E5171] font-semibold">
 		<li><a href="#">Tentang Kami</a></li>
 		<li><a href="#">Klinik</a></li>
 		<li><a href="#">Daycare & Grooming</a></li>
 		<li><a href="#">Adopsi</a></li>
 	</ul>
+	<div class="flex md:hidden flex-col justify-center gap-1.5 cursor-pointer" id="hamburger">
+		<div class="w-8 xs:w-10 h-1 bg-dark"></div>
+		<div class="w-8 xs:w-10 h-1 bg-dark"></div>
+		<div class="w-8 xs:w-10 h-1 bg-dark"></div>
+	</div>
 </nav>
