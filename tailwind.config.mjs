@@ -9,6 +9,9 @@ export default {
 			borderWidth: {
 				10: "10px",
 			},
+			borderRadius: {
+				"4xl": "32px",
+			},
 			colors: {
 				dark: "#2E5070",
 				light: "#EDF8F9",
@@ -17,8 +20,8 @@ export default {
 				fuschia: "#C6EAE3",
 			},
 			screens: {
-				xs: "480px"
-			}
+				xs: "480px",
+			},
 		},
 	},
 	plugins: [],

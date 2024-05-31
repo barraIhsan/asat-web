@@ -1,4 +1,4 @@
-<nav class="flex justify-between px-10 py-3 bg-[url('/img/paw-pattern-light.png')] rounded-full fixed inset-x-5 top-5 bg-white z-10">
+<nav class="flex justify-between px-10 py-3 bg-[url('/img/paw-pattern-light.png')] rounded-full fixed inset-x-5 top-5 bg-white z-20">
 	<img src="/img/logo-dark.svg" alt="Logo" class="w-36 xs:w-44">
 	<ul class="hidden md:flex items-center gap-8 text-[#2E5171] font-semibold">
 		<li><a href="#">Tentang Kami</a></li>
@@ -7,8 +7,20 @@
 		<li><a href="#">Adopsi</a></li>
 	</ul>
 	<div class="flex md:hidden flex-col justify-center gap-1.5 cursor-pointer" id="hamburger">
-		<div class="w-8 xs:w-10 h-1 bg-dark"></div>
-		<div class="w-8 xs:w-10 h-1 bg-dark"></div>
-		<div class="w-8 xs:w-10 h-1 bg-dark"></div>
+		<div class="w-8 xs:w-10 h-1 bg-dark duration-300"></div>
+		<div class="w-8 xs:w-10 h-1 bg-dark duration-300"></div>
+		<div class="w-8 xs:w-10 h-1 bg-dark duration-300"></div>
 	</div>
 </nav>
+<div class="hidden md:hidden translate-y-full fixed inset-x-6 z-20 top-32 bottom-0 bg-white bg-[url('/img/paw-pattern-light.png')] py-10 px-5 rounded-t-4xl" id="hamburgerList">
+	<ul class="flex flex-col gap-10 text-center text-dark font-semibold text-2xl duration-1000">
+		<li><a href="#">Tentang Kami</a></li>
+		<li><a href="#">Klinik</a></li>
+		<li><a href="#">Daycare & Grooming</a></li>
+		<li><a href="#">Adopsi</a></li>
+		<li><a href="#">0812-3456-7890</a></li>
+		</ul>
+		</div>
+<div class="md:hidden fixed inset-0 bg-black/80 opacity-0 z-10 duration-300" id="hamburgerOverlay"></div>
+
+<script src="../scripts/navbar.js"></script>
