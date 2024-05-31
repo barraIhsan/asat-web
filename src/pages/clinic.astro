@@ -1,0 +1,55 @@
+---
+import Navbar from '../layouts/Navbar.astro'
+import Title from '../components/Title.svelte'
+import Features from '../components/ClinicFeatures.svelte'
+import Schedule from '../components/ClinicSchedule.svelte'
+import Footer from '../layouts/Footer.astro'
+import '@fontsource/Barlow'
+import '@fontsource/Barlow/600.css'
+import '@fontsource/Barlow/700.css'
+import '@fontsource/Barlow/800.css'
+import '@fontsource/Barlow/900.css'
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Clinic - Joy Cat</title>
+	</head>
+	<body>
+		<Navbar />
+		<img src="img/hero-clinic.jpg" alt="" class="h-56 xs:h-96 xl:h-[600px] w-full object-cover">
+		<section class="bg-light flex flex-col gap-20 py-20 px-6 sm:px-12 md:px-24 xl:px-44 2xl:px-80">
+		<Title title="Klinik Kucing" desc="Selamat datang di Klinik Kucing Joy Cat, tempat di mana kesehatan dan kesejahteraan kucing Anda adalah prioritas utama kami. Kami menyediakan berbagai layanan medis dengan dukungan tim dokter hewan yang berpengalaman dan fasilitas modern." />
+
+		<Features title="1. Pemeriksaan Kesehatan Rutin" desc="Kami menawarkan pemeriksaan kesehatan rutin untuk memastikan kucing Anda dalam kondisi prima. Pemeriksaan ini meliputi pengecekan fisik, pengukuran berat badan, dan evaluasi kesehatan secara keseluruhan." />
+		<Features title="2. Vaksinasi" desc="Lindungi kucing Anda dari penyakit berbahaya dengan vaksinasi yang tepat waktu. Kami menyediakan vaksinasi lengkap sesuai dengan jadwal yang direkomendasikan oleh dokter hewan." />
+		<Features title="3. Pengobatan Penyakit" desc="Apapun penyakit yang mungkin dihadapi kucing Anda, kami siap memberikan diagnosis yang akurat dan pengobatan yang efektif. Tim kami berkomitmen untuk memberikan perawatan terbaik agar kucing Anda segera pulih." />
+		<Features title="4. Bedah" desc="Klinik kami dilengkapi dengan ruang operasi yang steril dan peralatan modern untuk melakukan berbagai prosedur bedah, dari operasi minor hingga operasi mayor. Dokter hewan kami akan memberikan penjelasan mendetail dan dukungan pasca-operasi." />
+		<Features title="5. Konsultasi Kesehatan" desc="Punya pertanyaan tentang kesehatan kucing Anda? Kami menyediakan layanan konsultasi kesehatan untuk memberikan informasi dan saran yang Anda butuhkan. Baik secara langsung di klinik atau melalui konsultasi online." />
+		<Features title="6. Laboratorium Diagnostik" desc="Dengan fasilitas laboratorium yang lengkap, kami dapat melakukan berbagai tes diagnostik seperti tes darah, urin, dan lainnya untuk mendukung diagnosis yang akurat." />
+		</section>
+		<section class="flex flex-col gap-8 py-20 px-6 sm:px-12 md:px-24 xl:px-44 2xl:px-80">
+			<h2 class="text-dark font-bold text-4xl">Jadwal Dokter</h2>
+
+			<div class="flex gap-5 py-10 px-5">
+				<Schedule imgSrc="img/dokter-bima-sakti.jpeg" name="dr. Bima Sakti" day="Senin, Rabu, Jumat" time="08.00 - 15.00" />
+				<Schedule imgSrc="img/dokter-andromeda.jpeg" name="dr. Andromeda" day="Selasa, Kamis, Sabtu" time="10.00 - 17.00" />
+			</div>
+
+			<div class="flex bg-[#5FB7A7] text-white rounded-2xl">
+				<div class="flex-1 flex flex-col gap-5 justify-center px-8">
+					<p class="text-3xl leading-[3rem]">Cek antrian klinik dan lakukan reservasi melalui nomor berikut:</p>
+					<div class="flex gap-3 items-center">
+						<img src="/img/whatsapp.svg" alt="WhatsApp Logo" class="size-14">
+						<p class="font-semibold text-6xl underline"><a href="https://wa.me/6281234567890">0812-3456-7890</a></p>
+					</div>
+				</div>
+				<img src="/img/cat-contact.jpg" alt="Cat wearing headphone" class="flex-1 h-[440px] object-cover">
+			</div>
+		</section>
+		<Footer />
+	</body>
+</html>
