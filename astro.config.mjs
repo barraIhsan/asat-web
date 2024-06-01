@@ -9,7 +9,7 @@ export default defineConfig({
 	vite: {
 		build: {
 			rollupOptions: {
-				external: ["@fontsource/Barlow"],
+				external: ["/^@fontsource/Barlow.*/"],
 			},
 		},
 	},
