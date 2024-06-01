@@ -12,5 +12,8 @@ export default defineConfig({
 				external: [/^@fontsource\/barlow.*/],
 			},
 		},
+		ssr: {
+			noExternal: /^@fontsource\/barlow.*/,
+		},
 	},
 });
