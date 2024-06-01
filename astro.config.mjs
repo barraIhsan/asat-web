@@ -1,4 +1,4 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
 
 import svelte from "@astrojs/svelte";
@@ -9,9 +9,7 @@ export default defineConfig({
 	vite: {
 		build: {
 			rollupOptions: {
-				external: [
-          /^@fontsource\/Barlow.*/
-        ],
+				external: [/^@fontsource\/barlow.*/],
 			},
 		},
 	},
