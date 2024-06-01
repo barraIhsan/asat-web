@@ -1,7 +1,7 @@
 ---
 import Navbar from '../layouts/Navbar.astro'
+import Hero from '../components/Hero.svelte'
 import Team from '../components/Team.svelte'
-import Title from '../components/Title.svelte'
 import Footer from '../layouts/Footer.astro'
 import '@fontsource/Barlow'
 import '@fontsource/Barlow/600.css'
@@ -20,9 +20,7 @@ import '@fontsource/Barlow/900.css'
 	</head>
 	<body>
 		<Navbar />
-		<img src="img/hero-tentang-kami.jpg" alt="" class="h-56 xs:h-96 xl:h-[600px] w-full object-cover">
-		<section class="bg-light flex flex-col gap-20 py-20 px-6 sm:px-12 md:px-24 xl:px-44 2xl:px-80">
-			<Title title="Tentang Kami" desc="Joy Cat didirikan oleh kakak beradik, dr. Bima Sakti Gemilang dan dr. Andromeda Gemilang. Datang dari keluarga pecinta kucing dan sempat memelihara hampir dari 100 ekor kucing, kami memahami bahwa kucing bukan hanya sekadar hewan peliharaan, tetapi juga anggota keluarga yang berharga. Oleh karena itu, kami bertekad untuk menyediakan layanan yang mendukung kesehatan dan kebahagiaan bagi kucing dan para pemiliknya." />
+		<Hero imgSrc="/img/hero-tentang-kami.jpg" imgAlt="" title="Tentang Kami" desc="Joy Cat didirikan oleh kakak beradik, dr. Bima Sakti Gemilang dan  dr. Andromeda Gemilang. Datang dari keluarga pecinta kucing dan sempat memelihara hampir dari 100 ekor kucing, kami memahami bahwa kucing bukan hanya sekadar hewan peliharaan, tetapi juga anggota keluarga yang berharga. Oleh karena itu, kami bertekad untuk menyediakan layanan yang mendukung kesehatan dan kebahagiaan bagi kucing dan para pemiliknya.">
 			<div class="flex flex-col gap-20">
 				<h2 class=" text-dark font-bold text-4xl">The Cat Doctors</h2>
 				<div class="flex flex-col lg:flex-row gap-8 items-center">
@@ -34,7 +32,7 @@ import '@fontsource/Barlow/900.css'
 					<p class="text-lg xs:text-xl flex-1">Dokter Andromeda Gemilang, adik dari dr. Bima adalah Praktisi Tingkat Lanjut  dalam Kedokteran Kucing dan memegang Keanggotaan Kolese Ilmuwan Hewan Indonesia untuk Kedokteran Kucing.</p>
 				</div>
 			</div>
-		</section>
+		</Hero>
 		<section class="px-12 py-20">
 			<h2 class="text-dark font-bold text-4xl">Tim Kami</h2>
 			<div class="py-10 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-14 sm:gap-8">
