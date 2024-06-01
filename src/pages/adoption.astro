@@ -1,0 +1,75 @@
+---
+import Navbar from '../layouts/Navbar.astro'
+import Hero from '../components/Hero.svelte'
+import AdoptionCards from '../components/AdoptionCards.svelte'
+import Footer from '../layouts/Footer.astro'
+import { adoptionData } from '../data/adoptionData'
+import '@fontsource/Barlow'
+import '@fontsource/Barlow/600.css'
+import '@fontsource/Barlow/700.css'
+import '@fontsource/Barlow/800.css'
+import '@fontsource/Barlow/900.css'
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Daycare & Grooming - Joy Cat</title>
+	</head>
+	<body>
+		<Navbar />
+		<Hero imgSrc="/img/hero-adoption.jpg" imgAlt="" title="Cat Adoption" desc="Berikut adalah beberapa kucing yang saat ini siap untuk diadopsi. Klik pada gambar untuk melihat informasi lebih detail tentang masing-masing kucing." />
+
+		<AdoptionCards adoptions={adoptionData}/>
+
+		<section class="flex justify-center items-center py-20 px-6 sm:px-12 md:px-24 xl:px-44 2xl:px-80 text-dark">
+			<div class="bg-gold rounded-2xl p-8 flex flex-col lg:flex-row gap-3">
+				<div class="flex-1 flex flex-col justify-center">
+					<h2 class="text-3xl">Tidak menemukan kucing yang tepat untuk Anda?</h2>
+					<p class="text-xl mb-8">Isi form di bawah ini, kami akan memberitahu Anda jika ada yang menitipkan kucing yang Anda inginkan</p>
+
+					<form class="flex flex-col gap-9" method="dialog">
+						<label for="name" class="block">
+							<span class="text-dark font-bold text-xl">Nama</span>
+							<input type="text" name="name" id="name" class="mt-1 block w-full h-14 border-none rounded-md placeholder:text-lg" placeholder="Tuliskan nama Anda">
+						</label>
+						<label for="email" class="block">
+							<span class="text-dark font-bold text-xl">Email</span>
+							<input type="text" name="email" id="email" class="mt-1 block w-full h-14 border-none rounded-md placeholder:text-lg" placeholder="Alamat Email Anda">
+						</label>
+						<label for="preference" class="block">
+							<span class="text-dark font-bold text-xl">Preferensi kucing yang diinginkan</span>
+							<textarea name="preference" id="preference" class="mt-1 w-full h-36 border-none rounded-md placeholder:text-lg resize-y" placeholder="Contoh: Persia, Betina, umur 3 tahun ke atas, putih polos"></textarea>
+						</label>
+						<button type="submit" id="submit" class="font-semibold text-2xl py-6 bg-dark rounded-full text-white">Submit</button>
+					</form>
+
+					<div class="text-3xl xs:text-4xl text-center h-[540px] hidden flex-col justify-center" id="thanksSubmit">
+						<p>Terima kasih telah mengisi formulir.</p>
+						<p>Kami akan memberitahu Anda via email jika kami menemukan kucing yang Anda cari.</p>
+						<p>😃</p>
+					</div>
+				</div>
+				<img src="/img/funny-cat.png" alt="" class="flex-1 lg:w-1/2 object-contain">
+			</div>
+		</section>
+
+		<Footer />
+
+		<script>
+			const submit = document.querySelector("#submit");
+			const form = document.querySelector("form");
+			const thanks = document.querySelector("#thanksSubmit");
+			submit.addEventListener("click", () => {
+				form.classList.add("hidden");
+				form.classList.remove("flex");
+
+				thanks.classList.remove("hidden");
+				thanks.classList.add("flex");
+			})
+		</script>
+	</body>
+</html>
