@@ -4,6 +4,7 @@ import Hero from '../components/Hero.svelte'
 import Features from '../components/ClinicFeatures.svelte'
 import Schedule from '../components/ClinicSchedule.svelte'
 import Footer from '../layouts/Footer.astro'
+import { clinicFeatures } from '../data/clinicFeatures'
 import '@fontsource/barlow'
 import '@fontsource/barlow/600.css'
 import '@fontsource/barlow/700.css'
@@ -22,12 +23,7 @@ import '@fontsource/barlow/900.css'
 	<body>
 		<Navbar />
 		<Hero imgSrc="/img/hero-clinic.jpg" imgAlt="" title="Klinik Kucing" desc="Selamat datang di Klinik Kucing Joy Cat, tempat di mana kesehatan dan kesejahteraan kucing Anda adalah prioritas utama kami. Kami menyediakan berbagai layanan medis dengan dukungan tim dokter hewan yang berpengalaman dan fasilitas modern.">
-			<Features title="1. Pemeriksaan Kesehatan Rutin" desc="Kami menawarkan pemeriksaan kesehatan rutin untuk memastikan kucing Anda dalam kondisi prima. Pemeriksaan ini meliputi pengecekan fisik, pengukuran berat badan, dan evaluasi kesehatan secara keseluruhan." />
-			<Features title="2. Vaksinasi" desc="Lindungi kucing Anda dari penyakit berbahaya dengan vaksinasi yang tepat waktu. Kami menyediakan vaksinasi lengkap sesuai dengan jadwal yang direkomendasikan oleh dokter hewan." />
-			<Features title="3. Pengobatan Penyakit" desc="Apapun penyakit yang mungkin dihadapi kucing Anda, kami siap memberikan diagnosis yang akurat dan pengobatan yang efektif. Tim kami berkomitmen untuk memberikan perawatan terbaik agar kucing Anda segera pulih." />
-			<Features title="4. Bedah" desc="Klinik kami dilengkapi dengan ruang operasi yang steril dan peralatan modern untuk melakukan berbagai prosedur bedah, dari operasi minor hingga operasi mayor. Dokter hewan kami akan memberikan penjelasan mendetail dan dukungan pasca-operasi." />
-			<Features title="5. Konsultasi Kesehatan" desc="Punya pertanyaan tentang kesehatan kucing Anda? Kami menyediakan layanan konsultasi kesehatan untuk memberikan informasi dan saran yang Anda butuhkan. Baik secara langsung di klinik atau melalui konsultasi online." />
-			<Features title="6. Laboratorium Diagnostik" desc="Dengan fasilitas laboratorium yang lengkap, kami dapat melakukan berbagai tes diagnostik seperti tes darah, urin, dan lainnya untuk mendukung diagnosis yang akurat." />
+			<Features features={clinicFeatures} />
 		</Hero>
 		<section class="flex flex-col gap-8 py-20 px-6 sm:px-12 md:px-24 xl:px-44 2xl:px-80">
 			<h2 class="text-dark font-bold text-4xl">Jadwal Dokter</h2>
