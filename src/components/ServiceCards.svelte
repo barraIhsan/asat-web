@@ -2,7 +2,7 @@
 	export let imgSrc, imgAlt, title, desc, link, btnText;
 </script>
 
-<div class="flex flex-col gap-5 text-dark bg-white p-4 rounded-2xl">
+<div class="flex-1 flex flex-col gap-5 text-dark bg-white p-4 rounded-2xl">
 	<img src="{imgSrc}" alt="{imgAlt}" class="rounded-2xl h-80 object-cover">
 	<h3 class="font-semibold text-2xl xs:text-3xl">{title}</h3>
 	<p class="text-lg xs:text-xl">{desc}</p>
