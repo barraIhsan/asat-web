@@ -5,15 +5,5 @@ import svelte from "@astrojs/svelte";
 
 // https://astro.build/config
 export default defineConfig({
-	integrations: [tailwind(), svelte()],
-	vite: {
-		build: {
-			rollupOptions: {
-				external: [/^@fontsource\/barlow.*/],
-			},
-		},
-		ssr: {
-			noExternal: ["@fontsource/barlow"],
-		},
-	},
+	integrations: [tailwind(), svelte()]
 });

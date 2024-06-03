@@ -1,14 +1,10 @@
 ---
+import '../styles/font.css'
 import Navbar from '../layouts/Navbar.astro'
 import Hero from '../components/Hero.svelte'
 import AdoptionCards from '../components/AdoptionCards.svelte'
 import Footer from '../layouts/Footer.astro'
 import { adoptionData } from '../data/adoptionData'
-import '@fontsource/barlow'
-import '@fontsource/barlow/600.css'
-import '@fontsource/barlow/700.css'
-import '@fontsource/barlow/800.css'
-import '@fontsource/barlow/900.css'
 ---
 
 <html lang="en">
@@ -67,7 +63,7 @@ import '@fontsource/barlow/900.css'
 			submit.addEventListener("click", (event) => {
 				if (form.checkValidity()) {
 					event.preventDefault();
-					
+
 					form.classList.add("hidden");
 					form.classList.remove("flex");
 
