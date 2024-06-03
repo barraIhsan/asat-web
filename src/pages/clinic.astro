@@ -5,6 +5,7 @@ import Features from '../components/ClinicFeatures.svelte'
 import Schedule from '../components/ClinicSchedule.svelte'
 import Footer from '../layouts/Footer.astro'
 import { clinicFeatures } from '../data/clinicFeatures'
+import { doctorData } from '../data/doctorData'
 import '@fontsource/barlow'
 import '@fontsource/barlow/600.css'
 import '@fontsource/barlow/700.css'
@@ -28,10 +29,7 @@ import '@fontsource/barlow/900.css'
 		<section class="flex flex-col gap-8 py-20 px-6 sm:px-12 md:px-24 xl:px-44 2xl:px-80">
 			<h2 class="text-dark font-bold text-4xl">Jadwal Dokter</h2>
 
-			<div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
-				<Schedule imgSrc="img/dokter-bima-sakti.jpeg" name="dr. Bima Sakti" day="Senin, Rabu, Jumat" time="08.00 - 15.00" />
-				<Schedule imgSrc="img/dokter-andromeda.jpeg" name="dr. Andromeda" day="Selasa, Kamis, Sabtu" time="10.00 - 17.00" />
-			</div>
+			<Schedule {doctorData} />
 
 			<div class="flex flex-col lg:flex-row bg-[#5FB7A7] text-white rounded-2xl overflow-hidden">
 				<div class="flex-1 flex flex-col gap-5 justify-center p-10">
