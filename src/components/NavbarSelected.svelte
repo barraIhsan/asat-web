@@ -15,13 +15,6 @@
 
 <ul class="hidden md:flex items-center gap-8 text-[#2E5171] font-semibold">
 	{#each navItems as item}
-		<li>
-			<a href="/{item.path}" class={pathUrl == item.path ? 'flex items-center gap-2' : ''}>
-				{#if pathUrl == item.path}
-					<img src="/img/paw.svg" alt="" class="size-5">
-				{/if}
-				{item.label}
-			</a>
-		</li>
+		<li><a href="/{item.path}" class={pathUrl == item.path ? "before:content-[url('/img/paw.svg')] before:mr-2" : ''}>{item.label}</a></li>
 	{/each}
 </ul>
