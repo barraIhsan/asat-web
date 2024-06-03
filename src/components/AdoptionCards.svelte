@@ -1,6 +1,4 @@
 <script>
-	import List from './AdoptionList.svelte'
-
 	export let adoptions;
 
 	 const properties = [
@@ -21,7 +19,8 @@
 
 				<div class="grid grid-cols-[1fr_4fr] xs:grid-cols-[1fr_3fr] gap-3">
 					{#each properties as property}
-						<List property={property.name} value={adoption[property.key] + (property.unit ? " " + property.unit : "")}/>
+						<p class="text-xl">{property.name}</p>
+						<p class="text-xl font-bold">{adoption[property.key] + (property.unit ? " " + property.unit : "")}</p>
 					{/each}
 				</div>
 			</div>
