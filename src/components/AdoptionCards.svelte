@@ -25,7 +25,7 @@
 					{/each}
 				</div>
 			</div>
-			<a href="https://wa.me/62812345678910?text=Saya%20mau%20adopsi%20{adoption.name}" class="bg-green hover:bg-greenHover py-6 flex justify-center gap-3 items-center rounded-full">
+			<a href="https://wa.me/62812345678910?text=Saya%20mau%20adopsi%20{adoption.name}" target="_blank" class="bg-green hover:bg-greenHover py-6 flex justify-center gap-3 items-center rounded-full">
 				<img src="/img/whatsapp.svg" alt="WhatsApp Logo" class="size-8">
 				<p class="text-white font-semibold text-2xl">Adopsi</p>
 			</a>
