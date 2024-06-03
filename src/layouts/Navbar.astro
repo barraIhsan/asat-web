@@ -1,11 +1,12 @@
+---
+import NavbarSelected from "../components/NavbarSelected.svelte";
+---
+
 <nav class="flex justify-between px-10 py-3 bg-[url('/img/paw-pattern-light.png')] rounded-full fixed inset-x-5 top-5 bg-white z-20 shadow-[0_6px_18px_0] shadow-black/5">
 	<a href="/"><img src="/img/logo-dark.svg" alt="Logo" class="w-36 xs:w-44"></a>
-	<ul class="hidden md:flex items-center gap-8 text-[#2E5171] font-semibold">
-		<li><a href="/about">Tentang Kami</a></li>
-		<li><a href="/clinic">Klinik</a></li>
-		<li><a href="/daycare">Daycare & Grooming</a></li>
-		<li><a href="/adoption">Adopsi</a></li>
-	</ul>
+
+	<NavbarSelected client:load />
+
 	<div class="flex md:hidden flex-col justify-center gap-1.5 cursor-pointer" id="hamburger">
 		<div class="w-8 xs:w-10 h-1 bg-dark duration-300 motion-reduce:duration-0"></div>
 		<div class="w-8 xs:w-10 h-1 bg-dark duration-300 motion-reduce:duration-0"></div>
@@ -45,7 +46,6 @@
 
 		hamburgerList.classList.toggle("opacity-0");
 		hamburgerList.classList.toggle("invisible");
-		hamburgerList.classList.toggle("pointer-events-none");
 		hamburgerList.classList.toggle("translate-y-full");
 
 		hamburgerOverlay.classList.toggle("opacity-0");
