@@ -2,6 +2,7 @@
 import '../styles/font.css'
 import Navbar from '../layouts/Navbar.astro'
 import ServiceCards from '../components/ServiceCards.svelte'
+import { serviceData } from '../data/serviceData'
 import Info from '../components/Info.svelte'
 import Testimonial from '../components/Testimonial.svelte'
 import Footer from '../layouts/Footer.astro'
@@ -39,11 +40,9 @@ import Footer from '../layouts/Footer.astro'
 		</section>
 		<section class="bg-[#C6EAE3] py-24 sm:py-32">
 			<h2 class="font-extrabold text-4xl xs:text-5xl sm:text-6xl text-center text-dark">Our Services</h2>
-			<div class="flex flex-col lg:flex-row gap-8 m-5 sm:m-10">
-				<ServiceCards imgSrc="/img/service-klinik.jpeg" imgAlt="Cat's Clinic Service" title="Klinik Kucing" desc="Tim dokter hewan kami yang berpengalaman siap memberikan perawatan medis terbaik untuk kucing Anda. Kami menyediakan layanan vaksinasi, pemeriksaan rutin, pengobatan penyakit, dan konsultasi kesehatan." link="/clinic" btnText="Cek Dokter"/>
-				<ServiceCards imgSrc="/img/service-daycare.webp" imgAlt="Cat's Daycare Service" title="Daycare & Grooming" desc="Butuh tempat yang aman dan nyaman untuk menitipkan kucing Anda saat Anda sibuk? Daycare kami adalah solusinya. Selain itu, layanan grooming kami akan membuat kucing Anda tetap bersih dan cantik." link="/daycare" btnText="Lihat Paket"/>
-				<ServiceCards imgSrc="/img/service-adopsi.jpeg" imgAlt="Cat's Adoption Service" title="Adopsi Kucing" desc="Bantu kami menemukan rumah baru yang penuh cinta untuk kucing-kucing yang membutuhkan. Lihat kucing-kucing yang siap diadopsi dan jadilah bagian dari cerita bahagia mereka." link="/adoption" btnText="Cari Kucing"/>
-			</div>
+
+			<ServiceCards {serviceData} />
+			
 		</section>
 		<section class="bg-[url('/img/about-bg.jpg')] bg-no-repeat bg-cover bg-center flex flex-col lg:flex-row gap-10 py-14 sm:py-32 px-5 sm:px-10">
 			<div class="bg-white p-6 xs:p-8 flex flex-col gap-5 rounded-2xl md:max-w-[492px] w-full">
