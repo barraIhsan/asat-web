@@ -31,7 +31,7 @@ import '@fontsource/barlow/900.css'
 					<h2 class="text-3xl">Tidak menemukan kucing yang tepat untuk Anda?</h2>
 					<p class="text-xl mb-8">Isi form di bawah ini, kami akan memberitahu Anda jika ada yang menitipkan kucing yang Anda inginkan</p>
 
-					<form class="flex flex-col gap-9" method="dialog">
+					<form class="flex flex-col gap-9">
 						<label for="name" class="block">
 							<span class="text-dark font-bold text-xl">Nama</span>
 							<input type="text" name="name" id="name" class="mt-1 block w-full h-14 border-none rounded-md placeholder:text-lg" placeholder="Tuliskan nama Anda" required>
@@ -64,8 +64,10 @@ import '@fontsource/barlow/900.css'
 			const form = document.querySelector("form");
 			const thanks = document.querySelector("#thanksSubmit");
 
-			submit.addEventListener("click", () => {
+			submit.addEventListener("click", (event) => {
 				if (form.checkValidity()) {
+					event.preventDefault();
+					
 					form.classList.add("hidden");
 					form.classList.remove("flex");
 
