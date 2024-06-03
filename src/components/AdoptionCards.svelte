@@ -1,5 +1,5 @@
 <script>
-	export let adoptions;
+	export let adoptionData;
 
 	 const properties = [
 		{ name: 'Umur', key: 'age', unit: " tahun" },
@@ -11,7 +11,7 @@
 </script>
 
 <section class="bg-light grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-10 py-8 px-5 xs:px-12">
-	{#each adoptions as adoption}
+	{#each adoptionData as adoption}
 		<div class="bg-white p-3 rounded-3xl flex flex-col gap-5 text-dark w-full">
 			<img src="{adoption.imgSrc}" alt="{adoption.name}" class="rounded-2xl h-60 object-cover">
 			<div class="flex flex-col gap-3">

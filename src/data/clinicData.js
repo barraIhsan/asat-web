@@ -1,4 +1,4 @@
-export const clinicFeatures = [
+export const clinicData = [
 	{
 		title: "1. Pemeriksaan Kesehatan Rutin",
 		desc: "Kami menawarkan pemeriksaan kesehatan rutin untuk memastikan kucing Anda dalam kondisi prima. Pemeriksaan ini meliputi pengecekan fisik, pengukuran berat badan, dan evaluasi kesehatan secara keseluruhan",

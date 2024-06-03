@@ -1,12 +1,12 @@
 <script>
-	export let features;
+	export let clinicData;
 </script>
 
 <ol class="space-y-10">
-	{#each features as feature}
+	{#each clinicData as clinic}
 		<li class="flex flex-col lg:flex-row gap-5 lg:py-10">
-			<h2 class="text-dark font-bold text-4xl lg:flex-1">{feature.title}</h2>
-			<p class="text-xl lg:flex-1">{feature.desc}</p>
+			<h2 class="text-dark font-bold text-4xl lg:flex-1">{clinic.title}</h2>
+			<p class="text-xl lg:flex-1">{clinic.desc}</p>
 		</li>
 	{/each}
 </ol>

@@ -5,7 +5,7 @@ import Hero from '../components/Hero.svelte'
 import Features from '../components/ClinicFeatures.svelte'
 import Schedule from '../components/ClinicSchedule.svelte'
 import Footer from '../layouts/Footer.astro'
-import { clinicFeatures } from '../data/clinicFeatures'
+import { clinicData } from '../data/clinicData'
 import { doctorData } from '../data/doctorData'
 ---
 
@@ -28,7 +28,7 @@ import { doctorData } from '../data/doctorData'
 	<body>
 		<Navbar />
 		<Hero imgSrc="/img/hero-clinic.jpg" imgAlt="" title="Klinik Kucing" desc="Selamat datang di Klinik Kucing Joy Cat, tempat di mana kesehatan dan kesejahteraan kucing Anda adalah prioritas utama kami. Kami menyediakan berbagai layanan medis dengan dukungan tim dokter hewan yang berpengalaman dan fasilitas modern.">
-			<Features features={clinicFeatures} />
+			<Features {clinicData} />
 		</Hero>
 		<section class="flex flex-col gap-8 py-20 px-6 sm:px-12 md:px-24 xl:px-44 2xl:px-80">
 			<h2 class="text-dark font-bold text-4xl">Jadwal Dokter</h2>

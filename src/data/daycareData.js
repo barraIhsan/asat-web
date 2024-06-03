@@ -1,4 +1,4 @@
-export const daycarePlans = [
+export const daycareData = [
 	{
 		title: "Daycare Sehari Penuh",
 		price: "200.000",

@@ -1,4 +1,4 @@
-export const groomingPlans = [
+export const groomingData = [
 	{
 		title: "Basic",
 		price: "150.000",
